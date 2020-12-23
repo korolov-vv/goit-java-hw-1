@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class HomeWork2Working {
+public class HomeWork3Working {
     public static void main(String[] args) {
         String[] names = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
         String[] toReplace = new String[]{"lopr", "boki"};
@@ -16,7 +16,7 @@ public class HomeWork2Working {
 //            System.out.println(createKeyboard());
 //        }
         String[] source = new String[] {"Hero", "Mihu"};
-        String[] copy = HomeWork2Working.makeCopy(source);
+        String[] copy = HomeWork3Working.makeCopy(source);
 
         source[0] = "CHANGED!"; //Мы меняем исходный массив, но на копии это не отображается
 
