@@ -26,8 +26,7 @@ public class HomeWork3Working {
 
 // Задача 13
     public static String[] makeCopy(String[] names){
-        String[] namesCopied = new String[names.length];
-        namesCopied = Arrays.copyOf(names, names.length);
+        String[] namesCopied = Arrays.copyOf(names, names.length);
         System.out.println("Copied!");
         return namesCopied;
     }
