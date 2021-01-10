@@ -1,6 +1,8 @@
+package HomeWork3;
+
 import java.util.Arrays;
 
-public class HomeWork3Working {
+public class HomeWork3Begin {
     public static void main(String[] args) {
         String[] names = new String[]{"mixa", "ukio", "barek", "krou", "fiha"};
         String[] toReplace = new String[]{"lopr", "boki"};
@@ -16,7 +18,7 @@ public class HomeWork3Working {
 //            System.out.println(createKeyboard());
 //        }
         String[] source = new String[] {"Hero", "Mihu"};
-        String[] copy = HomeWork3Working.makeCopy(source);
+        String[] copy = HomeWork3Begin.makeCopy(source);
 
         source[0] = "CHANGED!"; //Мы меняем исходный массив, но на копии это не отображается
 

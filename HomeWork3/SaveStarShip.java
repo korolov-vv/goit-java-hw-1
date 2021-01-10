@@ -1,6 +1,58 @@
+package HomeWork3;
+
 import java.util.*;
 
 public class SaveStarShip {
+
+    //Zadacha 25
+    public static String evenOrOdd(int number) {
+        //       if (number%2 == 0) {
+        //           return "even";
+        //       } else {
+        //           return "odd";
+///        }
+        String evenOrOdd = (number / 2 == 0) ? "even" : "odd";
+        return evenOrOdd;
+    }
+
+    //Zadacha 23
+    public boolean isHangarOk(int side1, int side2, int price){
+        System.out.println(side1 + " " + side2 + " " + price);
+
+        int square = side1 * side2;
+        System.out.println(square);
+        boolean isSquareOk = square >= 1500;
+
+        double pricePerMeter = price / square;
+        System.out.println(pricePerMeter);
+        boolean isPriceOk = pricePerMeter <= 1000;
+
+        boolean side1MoreTenSide2 = side1 > side2;
+        System.out.println(side1MoreTenSide2);
+        boolean sideToSide1 = (double)((double)side1 / (double)side2) < 2.0;
+        System.out.println("side1/side2: " + side1 / side2);
+        boolean sideToSide2 = (double)((double)side2 / (double)side1) <= 2.0;
+        System.out.println("side2/side1: " + side2 / side1);
+        boolean isSidesOk = (side1MoreTenSide2 && sideToSide1) | (!side1MoreTenSide2 && sideToSide2);
+        boolean main = (isSquareOk && isPriceOk && isSidesOk);
+        return main;
+    }
+
+    // Zadacha 22
+    public String getMyPrizes(int ticket){
+boolean x = ticket % 10 == 0;
+boolean y = Integer.toString(ticket).charAt(Integer.toString(ticket).length()-1) == '7';
+boolean z = ticket > 200;
+
+        if (x) {
+            if (y){
+                if(z) {return "crystall chip coin";} else return "crystall chip";
+            } else if(z) {return "crystall coin";} return "crystall";
+        } else if (y) {
+            if(z){return "chip coin";} else return "chip";
+        } else if (z) {return "coin";} else
+        return "";
+    }
 
     // Zadacha 21
     int power;
@@ -101,5 +153,17 @@ public class SaveStarShip {
         //Test stdin data - 1 3 5.
         //Console ouput should be 3.5
         ship.calculateMaxPower();
+
+        //Should be "crystall coin"
+        System.out.println(ship.getMyPrizes(140));
+
+        //Should be true
+        System.out.println(ship.isHangarOk(41, 101, 190486));
+
+        //Should be even
+        System.out.println(evenOrOdd(10));
+
+        //Should be odd
+        System.out.println(evenOrOdd(5));
     }
 }

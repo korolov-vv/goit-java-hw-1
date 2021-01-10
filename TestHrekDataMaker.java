@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Test {
+public class TestHrekDataMaker {
     public static void main(String[] args) {
         String[] names = new String[] {"hter", "pou", "diz"};
         int[] ages = new int[] {30, 35, 70};
