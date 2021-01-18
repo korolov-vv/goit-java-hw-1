@@ -1,7 +1,5 @@
 package HomeWorkk5;
 
-import java.util.Arrays;
-
 class LevelTest {
     public static void main(String[] args) {
         Level.Point p1 = new Level.Point(3, 5);
