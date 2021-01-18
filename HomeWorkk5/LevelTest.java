@@ -1,5 +1,7 @@
 package HomeWorkk5;
 
+import java.util.Arrays;
+
 class LevelTest {
     public static void main(String[] args) {
         Level.Point p1 = new Level.Point(3, 5);
@@ -12,6 +14,8 @@ class LevelTest {
 
         //Quarke level, name is Quarke Intro, difficulty is Easy, point count is 3
         System.out.println(new Level(info, points));
+        //3015
+        System.out.println(new Level(info, points).calculateLevelHash());
     }
 }
 
@@ -26,6 +30,14 @@ class Level {
     public Level(LevelInfo levelInfo, Point[] points) {
         this.levelInfo = levelInfo;
         this.points = points;
+    }
+
+    public int calculateLevelHash(){
+        int levelHash = 0;
+        for (int i = 0; i < points.length; i++) {
+            levelHash += points[i].x * points[i].y;
+        }
+        return levelHash;
     }
 
     @Override
