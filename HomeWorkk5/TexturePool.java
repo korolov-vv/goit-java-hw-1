@@ -1,6 +1,6 @@
 package HomeWorkk5;
 
-class TexturePool{
+class TexturePool {
     private static TexturePool instance = new TexturePool();
 
     public static TexturePool getInstance() {
@@ -10,10 +10,11 @@ class TexturePool{
     private TexturePool() {
     }
 
-    public String getTexture(String textureName){
+    public String getTexture(String textureName) {
         return "Get texture " + textureName;
     }
 }
+
 class TexturePoolTest {
     public static void main(String[] args) {
         //Get texture MainHero
