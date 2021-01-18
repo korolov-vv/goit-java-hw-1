@@ -34,7 +34,7 @@ class OneMoreLevelLoader {
 }
 
 class OneMoreLevelLoaderTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LevelTooBigException {
         //Level loaded
         new OneMoreLevelLoader().load(new OneMoreLevel(10, 20));
 
