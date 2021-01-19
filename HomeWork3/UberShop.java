@@ -3,6 +3,21 @@ package HomeWork3;
 import java.util.Arrays;
 
 public class UberShop {
+    //Zadacha 32
+    public int[] removePrice(int[] prices, int toRemove) {
+        int j = 0;
+        int x = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] == toRemove) {++x;}
+        }
+        int[] finalPrices = new int[prices.length - x];
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] != toRemove) {
+                finalPrices[j++] = prices[i];
+            }
+        }
+        return finalPrices;
+    }
 
     // Zadacha 31
     public int getMinPriceCount(int[] prices) {
@@ -53,8 +68,8 @@ public class UberShop {
         UberShop shop = new UberShop();
 
         //Should be 100 jup. 23.5 jup. 400 jup. - one price per line
-        float[] prices = new float[]{100f, 23.5f, 400f};
-        shop.printPrices(prices);
+//        float[] prices = new float[]{100f, 23.5f, 400f};
+//        shop.printPrices(prices);
 
         //Should be [200, 2250]
         float[] prices2 = new float[]{100f, 1500f};
@@ -69,5 +84,10 @@ public class UberShop {
         //Should be [50, 1500]
         int[] prices4 = new int[]{11, 10, 10, 11, 10, 12, 10, 9, 11, 11, 12, 9, 12, 12, 10};
         System.out.println(shop.getMinPriceCount(prices4)); //Should be 2
+
+        //Should be [150, 200]
+        int[] prices = new int[]{0, 6, 7, 6, 1, 5, 2, 8, 9, 5};
+        int toRemove = 6;
+        System.out.println(Arrays.toString(shop.removePrice(prices, toRemove)));
     }
 }
