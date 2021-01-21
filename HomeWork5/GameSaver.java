@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 public class GameSaver {
     static {

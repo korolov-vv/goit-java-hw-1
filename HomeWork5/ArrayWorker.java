@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 class ArrayWorker {
     public void printElement(int[] array, int index) {

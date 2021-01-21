@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 import java.util.Objects;
 import java.util.stream.IntStream;
 

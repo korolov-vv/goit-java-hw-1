@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 class RectangleAreaTest {
     public static void main(String[] args) {

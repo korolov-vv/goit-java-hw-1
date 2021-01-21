@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 class DistanceTest {
     public static void main(String[] args) {

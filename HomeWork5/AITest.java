@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 public class AITest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 public class HeroTest {
     public static void main(String[] args) {

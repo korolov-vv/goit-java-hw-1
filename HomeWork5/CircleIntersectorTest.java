@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 class CircleIntersectorTest {
     public static void main(String[] args) {

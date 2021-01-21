@@ -1,4 +1,4 @@
-package HomeWorkk5;
+package HomeWork5;
 
 class TexturePool {
     private static TexturePool instance = new TexturePool();
