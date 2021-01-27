@@ -5,12 +5,9 @@ public class NameCounter {
         int count = 0;
         String[] s = text.split(" ");
         for (int i = 0; i < s.length; i++) {
-            if(Character.isUpperCase(s[i].charAt(0)) && s[i].length() >= 2){
-                for (int j = 1; j < s[i].length();) {
-                    if(Character.isLowerCase(s[i].charAt(j))){
-                        j++;
-                    }else break;
-                }
+            boolean x = Character.isUpperCase(s[i].charAt(0)) && s[i].length() >= 2;
+            boolean y = s[i].substring(1, s[i].length() - 1).toLowerCase().equals(s[i].substring(1, s[i].length() - 1));
+            if (x && y) {
                 count++;
             }
         }
