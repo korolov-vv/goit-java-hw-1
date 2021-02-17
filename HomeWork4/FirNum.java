@@ -5,6 +5,21 @@ public class FirNum {
         return n;
     }
 }
+
+class FirNumBasis extends FirNum {
+    @Override
+    public int calc(int n){
+        int res = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if(i % 2 == 0){
+                res += i;
+            }
+        }
+        return res / 2;
+    }
+}
+
 class FirNumSum extends FirNum {
     @Override
     public int calc(int n){
@@ -65,6 +80,7 @@ class FirTest {
         FirNum firNum2 = new FirNumSum();
         FirNum firNum3 = new FirNumMultiplyOdd();
         FirNum firNum4 = new FirNumFizzBuzz();
+        FirNum firNum5 = new FirNumBasis();
 
         //Should be 10
         System.out.println(firTest.test(firNum, 10));
@@ -80,5 +96,8 @@ class FirTest {
 
         //Should be 83
         System.out.println(firTest.test(firNum4, 20));
+
+        //Should be 10
+        System.out.println(firTest.test(firNum5, 9));
     }
 }
