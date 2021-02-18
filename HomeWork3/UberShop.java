@@ -3,6 +3,44 @@ package HomeWork3;
 import java.util.Arrays;
 
 public class UberShop {
+
+    //Zadacha 35
+    public int getPricesSum(int[] prices, int minPrice, int maxPrice) {
+        int sum = 0;
+        for(int price: prices){
+            if(price >= minPrice && price <= maxPrice){
+                sum += price;
+            }
+        }
+        return sum;
+    }
+
+    //Zadacha 34
+    public String[] mergeStocks(String[] showcaseStocks, String[] warehouseStocks){
+        int newArrayLength = showcaseStocks.length + warehouseStocks.length;
+        String[] mergeStocks = Arrays.copyOf(showcaseStocks, newArrayLength);
+        int i = 0;
+        for (String warehouseStock: warehouseStocks){
+            mergeStocks[showcaseStocks.length + i] = warehouseStock;
+            i++;
+        }
+        return mergeStocks;
+    }
+
+    //Zadacha 33
+    public int[] leavePrice9(int[] prices) {
+        int newArrayLength = prices.length;
+        int[] resPrices = new int[newArrayLength];
+        int j = 0;
+        for (int price : prices) {
+                if ((price % 10) == 9) {
+                    resPrices[j] = price;
+                    j++;
+                }else newArrayLength--;
+        }
+        return Arrays.copyOf(resPrices, newArrayLength);
+    }
+
     //Zadacha 32
     public int[] removePrice(int[] prices, int toRemove) {
         int j = 0;
@@ -89,5 +127,18 @@ public class UberShop {
         int[] prices = new int[]{0, 6, 7, 6, 1, 5, 2, 8, 9, 5};
         int toRemove = 6;
         System.out.println(Arrays.toString(shop.removePrice(prices, toRemove)));
+
+        //Should be [1599, 399]
+        int[] prices5 = new int[] {399, 1599, 399, 50, 10, 10, 70};
+        System.out.println(Arrays.toString(shop.leavePrice9(prices5)));
+
+        //Final result should be ["gun", "firebow", "firegun"]
+        String[] showcaseStocks = new String[] {"gun", "firebow"};
+        String[] warehouseStocks = new String[] {"firegun"};
+        System.out.println(Arrays.toString(shop.mergeStocks(showcaseStocks, warehouseStocks)));
+
+        //Should be 144 - 20 + 50 + 40 + 34
+        int[] prices6 = new int[] {10, 20, 50, 40, 34, 500};
+        System.out.println(shop.getPricesSum(prices6, 20, 50));
     }
 }
